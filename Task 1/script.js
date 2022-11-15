@@ -10,21 +10,18 @@ Pastaba: rezultatas turi būti matomas pateikus formą ir atvaizduojamas
 ------------------------------------------------------------------- */
 
 // kintamieji
+let formEl = document.querySelector("form");
 let inputEl = document.getElementById("search");
 let outputEl = document.getElementById("output");
 
 // forma su nuskaitymu submit (event listeneris)
 // - formoje nuskaitom input value
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-// input value eina per aprasyta skaiciuokle
-
-// sukuriam elementa su apskaiciuotomis vertemis
-
-//  <ol>
-// <li>XX Kg yra XX.XX Svarai (lb) | Formulė: lb = kg * 2.2046</li>
-// <li>XX Kg yra XX.XX Gramai (g) | Formulė: g = kg / 0.0010000</li>
-// <li>XX Kg yra XX.XX Uncijos (oz) | Formulė: oz = kg * 35.274</li>
-// </ol>
+  // input value eina per aprasyta skaiciuokle
+  OutputGenerate(inputEl.value);
+});
 
 // funkcija skaiciavimams ir html ivedimui
 function OutputGenerate(inputValue) {
@@ -38,15 +35,15 @@ function OutputGenerate(inputValue) {
   const liEl3 = document.createElement("li");
 
   // irasau kintamas reiksmes
-  liEl1.textContent = `${inputValue} Kg yra ${
-    inputValue * 2.2046
-  } Svarai (lb) | Formulė: lb = kg * 2.2046`;
-  liEl2.textContent = `${inputValue} Kg yra ${
-    inputValue * 0.001
-  } Gramai (g) | Formulė: g = kg / 0.0010000<`;
-  liEl3.textContent = `${inputValue} Kg yra ${
-    inputValue * 35.274
-  } Uncijos (oz) | Formulė: oz = kg * 35.274`;
+  liEl1.textContent = `${inputValue} Kg yra ${(inputValue * 2.2046).toFixed(
+    2
+  )} Svarai (lb) | Formulė: lb = kg * 2.2046`;
+  liEl2.textContent = `${inputValue} Kg yra ${(inputValue * 0.001).toFixed(
+    2
+  )} Gramai (g) | Formulė: g = kg / 0.0010000`;
+  liEl3.textContent = `${inputValue} Kg yra ${(inputValue * 35.274).toFixed(
+    2
+  )} Uncijos (oz) | Formulė: oz = kg * 35.274`;
 
   // list itemai i order lista
   olEl.append(liEl1, liEl2, liEl3);
@@ -54,7 +51,3 @@ function OutputGenerate(inputValue) {
   // order listas i output diva
   outputEl.append(olEl);
 }
-
-// isvalom ankstesni elementa
-
-// atvaizduojam sukurta elementa html
