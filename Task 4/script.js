@@ -8,4 +8,4 @@ Pastaba: Sukurta kortelė, kurioje yra informacija apie automobilį (brand), tur
 būti stilizuota su CSS ir būti responsive;
 -------------------------------------------------------------------------- */
 
-const ENDPOINT = 'cars.json';
+const ENDPOINT = "cars.json";
