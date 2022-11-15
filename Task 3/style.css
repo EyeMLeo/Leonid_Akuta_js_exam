@@ -7,15 +7,10 @@
   'Lucida Sans', Arial, sans-serif;
 }
 
-a{
-  overflow-wrap: break-word;
-}
-
-/* Mob f */
+/* Mobile first */
 .wrapper {
   min-height: 100vh;
-  /* min-width: calc(100vw - (100vw - 100%)); */
-  /* width: 100%; */
+  min-width: calc(100vw - (100vw - 100%));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,9 +39,8 @@ a{
   cursor: pointer;
   opacity: 0.9;
 }
-
 .output-cointainer {
-  width: 100%;
+  width: 80%;
   margin: 25px 0;
   display: flex;
   flex-direction: column;
@@ -63,7 +57,7 @@ a{
   gap: 2rem;
   
   /* suspicioous */
-  min-width: 80%;
+  /* max-width: 80%; */
   margin-top: 25px;
   padding: 30px;
   border-radius: 5px;
@@ -75,10 +69,12 @@ a{
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0 0 7px 0px grey;
+  /* max-width: 100%; */
   
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
+  width: 100%;
   
 }
 
@@ -93,17 +89,29 @@ a{
 }
 
 .profileImg{
-  height: 100px;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 
+a{
+  word-break: break-all;
+}
 
 
-/* @media screen and (min-width: 768px){
+@media screen and (min-width: 900px){
 
   .output-cointainer #output {
-    display: grid;
     grid-template-columns: 1fr 1fr;
 
   }
-} */
+}
+
+
+@media screen and (min-width: 1200px){
+
+  .output-cointainer #output {
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+}
