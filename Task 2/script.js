@@ -4,12 +4,18 @@ su tekstu "CLICK ME". Paspaudimų rezultatas turi būti matomas dešinėje
 pusėje esančiame "state" skaičiavimo bloke (<div id="btn__state">0</div>)
 ------------------------------------------------------------------- */
 
-// 2 contantos ir 1 kintamasis
+// 2 contantos
 // - paspaudimo mygtukas
+const btnEl = document.getElementById("btn__element");
 // -  Score atvaizdavimas
-// -  Score rezultatas
+const btnStateEl = document.getElementById("btn__state");
 
 // mygtuko nuskaitymo funkcija
-// - nuskaitom score atvaizduota reiksme
-// - prie nuskaitytos reiksmes pridedam 1
-// - atvaizduojam nauja score reiksme
+btnEl.addEventListener("click", () => {
+  // - nuskaitom score atvaizduota reiksme
+  let btnStateElValue = btnStateEl.textContent;
+
+  // - prie nuskaitytos reiksmes pridedam 1
+  // - atvaizduojam nauja score reiksme
+  btnStateEl.textContent = +btnStateElValue + 1;
+});
