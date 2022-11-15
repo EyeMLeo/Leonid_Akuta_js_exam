@@ -26,5 +26,6 @@ class Calculator {
     return a / b;
   }
 }
+
 let resultCalculate = new Calculator(16, 4);
 console.log("resultCalculate ===", resultCalculate);
