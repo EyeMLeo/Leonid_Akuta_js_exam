@@ -9,6 +9,10 @@ Pastaba: rezultatas turi būti matomas pateikus formą ir atvaizduojamas
 <div id="output"></div> viduje. Gautus atsakymus stilizuokite naudojant CSS;
 ------------------------------------------------------------------- */
 
+// kintamieji
+let inputEl = document.getElementById("search");
+let outputEl = document.getElementById("output");
+
 // forma su nuskaitymu submit (event listeneris)
 // - formoje nuskaitom input value
 
