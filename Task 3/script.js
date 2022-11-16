@@ -20,7 +20,7 @@ btnEl.addEventListener("click", () => {
   // litle extra while loading
   outputEl.innerHTML = `<div></div><img
   src="https://i.stack.imgur.com/hzk6C.gif"
-  alt="loading"
+  alt="loading"<div></div>
 />`;
   fetch(ENDPOINT)
     .then((response) => response.json())
@@ -48,6 +48,7 @@ function createOneCard(imgUrl, name) {
   let imgEl = document.createElement("img");
   imgEl.classList.add("profileImg");
   imgEl.src = imgUrl;
+  imgEl.alt = "users profile picture";
 
   // h3 el
   let h3El = document.createElement("h3");
