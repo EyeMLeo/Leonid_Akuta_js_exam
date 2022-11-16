@@ -38,9 +38,9 @@ function OutputGenerate(inputValue) {
   liEl1.textContent = `${inputValue} Kg yra ${(inputValue * 2.2046).toFixed(
     2
   )} Svarai (lb) | Formulė: lb = kg * 2.2046`;
-  liEl2.textContent = `${inputValue} Kg yra ${(inputValue * 0.001).toFixed(
-    2
-  )} Gramai (g) | Formulė: g = kg / 0.0010000`;
+  liEl2.textContent = `${inputValue} Kg yra ${(inputValue / 0.001).toFixed(
+    0
+  )} Gramai (g) | Formulė: g = kg / 0.001`;
   liEl3.textContent = `${inputValue} Kg yra ${(inputValue * 35.274).toFixed(
     2
   )} Uncijos (oz) | Formulė: oz = kg * 35.274`;

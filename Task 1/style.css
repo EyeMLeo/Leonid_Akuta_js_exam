@@ -33,7 +33,7 @@ form {
   max-width: 80%;
   margin: 50px auto;
   background-color: #fff4d5;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 #submit-btn {
@@ -61,12 +61,17 @@ form {
 li{
   list-style-position: inside;
   padding: 0.5rem 1rem;
+  /* font-size: 2rem; */
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) {
   .headline {
     font-size: 3.5em;
+  }
+
+  #output{
+    font-size: 2rem;
   }
 
   #search,
