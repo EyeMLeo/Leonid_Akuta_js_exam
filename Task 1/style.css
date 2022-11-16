@@ -29,13 +29,11 @@ form {
   flex-wrap: wrap;
 }
 
-#search {
-  width: 65%;
-  margin: 0;
-  padding: 20px;
-  outline: 0;
-  border: 0;
-  font-size: 1.1em;
+#output{
+  max-width: 80%;
+  margin: 50px auto;
+  background-color: #fff4d5;
+  font-size: 1.1rem;
 }
 
 #submit-btn {
@@ -52,10 +50,28 @@ form {
   color: #fff;
 }
 
+#search {
+  width: 65%;
+  margin: 0;
+  padding: 20px;
+  outline: 0;
+  border: 0;
+  font-size: 1.1em;
+}
+li{
+  list-style-position: inside;
+  padding: 0.5rem 1rem;
+  /* font-size: 2rem; */
+}
+
 /* Tablet */
 @media screen and (min-width: 768px) {
   .headline {
     font-size: 3.5em;
+  }
+
+  #output{
+    font-size: 2rem;
   }
 
   #search,
