@@ -23,6 +23,7 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
 #btn__element {
   width: 75%;
   padding: 15px 25px;
@@ -41,7 +42,9 @@
 
 #btn__state {
   width: 25%;
-  padding: 15px 25px;
+  /* padding: 15px 25px; */
+  display: grid;
+  place-items: center;
   background-color: rgb(59, 59, 59);
   border: #222;
   color: #fff;
@@ -49,3 +52,8 @@
   font-size: 2em;
   text-align: center;
 }
+
+
+.btn:active{
+transform: scale(1.2);
+ }
