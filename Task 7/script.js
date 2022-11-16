@@ -11,8 +11,8 @@ const audi = {
   color: "white",
 };
 
-function keysOnly(arr) {
+function showObjectKeys(arr) {
   return Object.keys(arr);
 }
 
-console.log(" keysOnly(audi) ===", keysOnly(audi));
+console.log(" showObjectKeys(audi) ===", showObjectKeys(audi));
