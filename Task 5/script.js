@@ -22,14 +22,14 @@ const users = [
 
 // turi suni
 function filterDogOwners(arr) {
-  let hasDogFilter = arr.filter((element) => element.hasDog);
-  console.log("hasDogFilter ===", hasDogFilter);
+  let users = arr.filter((element) => element.hasDog);
+  return users;
 }
-filterDogOwners(users);
+console.log("filterDogOwners(users) ===", filterDogOwners(users));
 
 // yra pilnameciai
 function areGrownUps(arr) {
-  let areGrownUpsFilter = arr.filter((element) => element.age >= 18);
-  console.log("areGrownUpsFilter ===", areGrownUpsFilter);
+  let users = arr.filter((element) => element.age >= 18);
+  return users;
 }
-areGrownUps(users);
+console.log("areGrownUps(users) ===", areGrownUps(users));

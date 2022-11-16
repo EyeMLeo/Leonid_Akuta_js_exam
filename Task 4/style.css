@@ -32,6 +32,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap:1rem;
+  padding-bottom: 2rem;
 }
 .oneCard{
   background-color: rgba(230, 230, 230, 0.6);
